@@ -9,7 +9,7 @@ public class CargoPlane extends Jet implements CargoLoader{
 		// TODO Auto-generated constructor stub
 	}
 
-	public CargoPlane(String model, int speed, int range, double price) {
+	public CargoPlane(String model, double speed, double range, double price) {
 		super(model, speed, range, price);
 		// TODO Auto-generated constructor stub
 	}

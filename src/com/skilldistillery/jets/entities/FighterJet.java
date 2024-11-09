@@ -7,7 +7,7 @@ public class FighterJet extends Jet implements CombatReady {
 		// TODO Auto-generated constructor stub
 	}
 
-	public FighterJet(String model, int speed, int range, double price) {
+	public FighterJet(String model, double speed, double range, double price) {
 		super(model, speed, range, price);
 		// TODO Auto-generated constructor stub
 	}

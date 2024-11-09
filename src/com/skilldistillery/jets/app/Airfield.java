@@ -30,8 +30,8 @@ public class Airfield {
 				String[] fields = line.split(",");
 				String jetType = fields[0];
 				String model = fields[1];
-				int speed = Integer.parseInt(fields[2]);
-				int range = Integer.parseInt(fields[3]);
+				double speed = Integer.parseInt(fields[2]);
+				double range = Integer.parseInt(fields[3]);
 				double price = Double.parseDouble(fields[4]);
 
 				Jet newJet = null;
@@ -125,13 +125,11 @@ public class Airfield {
 		}
 	}
 	
-	public void addJet() {
-//		TODO logic to add a jet
+
+	public List<Jet> getFleet() {
+		return fleet;
 	}
+
 	
-	public void removeJet() {
-//		TODO logic to remove jet
-	}
-	
-	
+		
 }
