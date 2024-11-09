@@ -2,6 +2,8 @@ package com.skilldistillery.jets.app;
 
 import java.util.Scanner;
 
+import com.skilldistillery.jets.entities.Jet;
+
 public class JetsApplication {
 	
 	private static Airfield airfield = new Airfield();;
@@ -17,13 +19,40 @@ public class JetsApplication {
 	
 	private void launch() {
 		boolean quit = false;
-		
+		System.out.println("Hello Commander! Awaiting your orders!");
+		System.out.println();
 		do {
 			displayUserMenu();
 			String input = sc.next();
 			
 			switch(input) {
-			case "1" : 
+			
+			case "1" : airfield.fleetList();
+						break;
+						
+			case "2" : airfield.takeOff();
+						break;
+						
+			case "3" : airfield.viewFastestJet();
+						break;
+						
+			case "4" : airfield.viewJetWithLongestRange();
+						break;
+						
+			case "5" : airfield.loadAllCargoJets();
+						break;
+			
+			case "6" : airfield.dogFight();
+						break;
+						
+			case "7" : airfield.addJet();
+						break;
+						
+			case "8" : airfield.removeJet();
+						break;
+						
+			case "9" : System.out.println("Thank you Commander! Goodbye.");
+						quit = true;
 			}
 			
 		}while( quit ==false);

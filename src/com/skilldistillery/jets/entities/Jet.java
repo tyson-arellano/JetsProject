@@ -5,15 +5,15 @@ import java.util.List;
 public abstract class Jet {
 
 	private String model;
-	private int speed;
-	private int range;
+	private double speed;
+	private double range;
 	private double price;
 
 	public Jet() {
 
 	}
 
-	public Jet(String model, int speed, int range, double price) {
+	public Jet(String model, double speed, double range, double price) {
 
 		this.model = model;
 		this.speed = speed;
@@ -22,6 +22,8 @@ public abstract class Jet {
 	}
 
 	public void fly() {
+		
+	
 		System.out.println(this.model + " flying");
 	}
 
@@ -38,19 +40,19 @@ public abstract class Jet {
 		this.model = model;
 	}
 
-	public int getSpeed() {
+	public double getSpeed() {
 		return speed;
 	}
 
-	public void setSpeed(int speed) {
+	public void setSpeed(double speed) {
 		this.speed = speed;
 	}
 
-	public int getRange() {
+	public double getRange() {
 		return range;
 	}
 
-	public void setRange(int range) {
+	public void setRange(double range) {
 		this.range = range;
 	}
 
@@ -64,7 +66,7 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "Jet [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
+		return "Jet Model: " + model + " | Speed: " + speed +" MPH " + " | Range: " + range + " Miles " + " | Price: " + price ;
 	}
 
 
