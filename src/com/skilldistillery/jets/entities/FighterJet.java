@@ -11,6 +11,7 @@ public class FighterJet extends Jet implements CombatReady {
 		super(model, speed, range, price);
 		// TODO Auto-generated constructor stub
 	}
+
 	@Override
 	public void fly() {
 		System.out.println(this.toString());
@@ -19,9 +20,9 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	public void fight() {
-		
-		System.out.println(this.getModel()+ " weapons loaded and ready for combat!");
+
+		System.out.println(this.getModel() + " weapons loaded and ready for combat!");
 		System.out.println();
-		
+
 	}
 }

@@ -61,7 +61,7 @@ public class Airfield {
 
 	public void fleetList() {
 		for (int i = 0; i < fleet.size(); i++) {
-			System.out.println(fleet.get(i));
+			System.out.println((i + 1) + ": " + fleet.get(i));
 			System.out.println();
 		}
 
@@ -124,12 +124,9 @@ public class Airfield {
 			}
 		}
 	}
-	
 
 	public List<Jet> getFleet() {
 		return fleet;
 	}
 
-	
-		
 }

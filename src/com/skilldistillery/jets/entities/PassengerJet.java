@@ -11,12 +11,11 @@ public class PassengerJet extends Jet {
 		super(model, speed, range, price);
 		// TODO Auto-generated constructor stub
 	}
+
 	@Override
 	public void fly() {
 		System.out.println(this.toString());
 		System.out.println(this.getModel() + " will fly for :" + this.getRange() / this.getSpeed());
 	}
-	
-	
 
 }

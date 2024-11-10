@@ -22,13 +22,12 @@ public abstract class Jet {
 	}
 
 	public void fly() {
-		
-	
+
 		System.out.println(this.model + " flying");
 	}
 
 	public double getMachSpeed() {
-		
+
 		return 0.0;
 	}
 
@@ -66,9 +65,8 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "Jet Model: " + model + " | Speed: " + speed +" MPH " + " | Range: " + range + " Miles " + " | Price: " + price ;
+		return "Jet Model: " + model + " | Speed: " + speed + " MPH " + " | Range: " + range + " Miles " + " | Price: "
+				+ price;
 	}
-
-
 
 }

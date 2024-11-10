@@ -2,7 +2,7 @@ package com.skilldistillery.jets.entities;
 
 import java.util.List;
 
-public class CargoPlane extends Jet implements CargoLoader{
+public class CargoPlane extends Jet implements CargoLoader {
 
 	public CargoPlane() {
 		super();
@@ -22,12 +22,10 @@ public class CargoPlane extends Jet implements CargoLoader{
 
 	@Override
 	public void loadCargo() {
-		
+
 		System.out.println(" Cargo has been loaded on " + this.getModel());
 		System.out.println();
-		
-	}
 
-	
+	}
 
 }
