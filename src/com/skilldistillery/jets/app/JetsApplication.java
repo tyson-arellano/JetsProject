@@ -169,7 +169,7 @@ public class JetsApplication {
 					keepGoing = false;
 				} catch (InputMismatchException e) {
 					System.out.println();
-					System.out.println("Invalid input. Please enter a valid price using ONLY NUMBERS.");
+					System.out.println("Invalid input. USE ONLY NUMBERS.");
 					System.out.println();
 					sc.next();
 					validInput = false;
