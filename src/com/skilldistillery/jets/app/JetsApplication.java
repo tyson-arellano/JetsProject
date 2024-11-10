@@ -57,11 +57,11 @@ public class JetsApplication {
 				break;
 
 			case "7":
-				addJet();
+				userAddJet();
 				break;
 
 			case "8":
-				removeJet();
+				userRemoveJet();
 				break;
 
 			case "9":
@@ -71,7 +71,7 @@ public class JetsApplication {
 
 			default:
 				System.out.println();
-				System.out.println("Invalid input. Please enter a number from the menu.");
+				System.out.println("Invalid input. Please enter a valid number.");
 				System.out.println();
 				break;
 			}
@@ -95,8 +95,8 @@ public class JetsApplication {
 		System.out.println("***********************************");
 	}
 
-	public void addJet() {
-		Jet newJet = null;
+	public void userAddJet() {
+		
 		String type;
 		String userJet;
 		double newJetSpeed = 0;
@@ -175,33 +175,14 @@ public class JetsApplication {
 					validInput = false;
 				}
 			} while (!validInput);
-
-			switch (type) {
-
-			case "1":
-				newJet = new CargoPlane(userJet, newJetSpeed, newJetRange, newJetPrice);
-				airfield.getFleet().add(newJet);
-				break;
-
-			case "2":
-				newJet = new FighterJet(userJet, newJetSpeed, newJetRange, newJetPrice);
-				airfield.getFleet().add(newJet);
-				break;
-
-			case "3":
-				newJet = new PassengerJet(userJet, newJetSpeed, newJetRange, newJetPrice);
-				airfield.getFleet().add(newJet);
-				break;
-
-			default:
-				System.out.println("Invalid Choice. Please try again, Commander.");
-			}
-
+			
+			airfield.addJet(type, userJet, newJetSpeed, newJetRange, newJetPrice);
+			
 		} while (keepGoing);
 
 	}
 
-	public void removeJet() {
+	public void userRemoveJet() {
 
 		System.out.println("Select the number corresponding to the aircraft you would like to remove from the fleet.");
 		System.out.println();
@@ -211,7 +192,7 @@ public class JetsApplication {
 
 		try {
 			selection = sc.nextInt();
-			airfield.getFleet().remove(selection - 1);
+			airfield.removeJet(selection);
 			System.out.println("Aircraft removed from fleet.");
 			System.out.println();
 

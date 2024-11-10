@@ -128,5 +128,35 @@ public class Airfield {
 	public List<Jet> getFleet() {
 		return fleet;
 	}
+	
+	public void addJet(String type, String userJet, double newJetSpeed, double newJetRange, double newJetPrice ) {
+		Jet newJet = null;
+		switch (type) {
+
+		case "1":
+			newJet = new CargoPlane(userJet, newJetSpeed, newJetRange, newJetPrice);
+			fleet.add(newJet);
+			break;
+
+		case "2":
+			newJet = new FighterJet(userJet, newJetSpeed, newJetRange, newJetPrice);
+			fleet.add(newJet);
+			break;
+
+		case "3":
+			newJet = new PassengerJet(userJet, newJetSpeed, newJetRange, newJetPrice);
+			fleet.add(newJet);
+			break;
+
+		default:
+			System.out.println("Invalid Choice. Please try again, Commander.");
+		}
+	}
+	
+	public void removeJet(int selection) {
+		
+		fleet.remove(selection - 1);	
+	}
+	
 
 }
